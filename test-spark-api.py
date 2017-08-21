@@ -34,12 +34,12 @@ def send_mess_to_spark(info):
 	# Spark Messages suffix for REST API
 	spark_messages_suffix = 'v1/messages'
 	# Script Testing ROOM ID
-	room_id = 'Y2lzY29zcGFyazovL3VzL1JPT00vYmUyOTRkNDAtODU1ZC0xMWU3LWE4ODUtYjllNDU4OWVmYWNl'
+	room_id = ''
 	# TechX Team Space ID
-	techx_space_id = 'Y2lzY29zcGFyazovL3VzL1JPT00vZWM2YzY3MzAtZDU1Mi0xMWU1LTg3ZDQtOWRiZjdlM2FkNGUx'
+	techx_space_id = ''
 
-	# temperature bot's login secret
-	temp_bot_spark_client_secret = 'OTkwZTliMDgtMDhkYy00MTdjLWFmMDQtYWRiYzU3Mzc4YmI0NmMxY2MyYzEtYWQ4'
+	# temperature bot's login secret - removed for sec
+	temp_bot_spark_client_secret = ''
 	
 	# Spark Message header and URI declaration
 	full_uri = spark_api_base_uri + spark_messages_suffix
@@ -55,7 +55,7 @@ def send_mess_to_spark(info):
 	# Check to see if an error occured in temp sensor check
 	if message == 'no error':
 		#tempThreshold declared at top of script for ease of access
-		if currentTemp >= tempThreshold:
+		if currentTemp >= tempThreshold or :
 			sparkMessage = 'RFL overheating current temp {0}'.format(currentTemp)
 			params = {
 					  "roomId" : room_id,
